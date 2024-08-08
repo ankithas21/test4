@@ -43,7 +43,7 @@ public class VulnerableController {
     @GetMapping("/welcome")
     public String welcome(@RequestParam String userInput) {
         // Vulnerable: Directly including user input in HTML response
-        return "<html><body>Welcome, " + userInput + "!</body></html>";
+        return "<html><body>Welcom, " + userInput + "!</body></html>";
     }
 
     // Vulnerable: Hardcoded secrets
@@ -51,7 +51,7 @@ public class VulnerableController {
     public String getSecret() {
         // Vulnerable: Hardcoded secret in code
         String secret = "SuperSecret123!";
-        return "The secret is: " + secret;
+        return "The secret : " + secret;
     }
 }
 
